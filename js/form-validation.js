@@ -14,13 +14,12 @@ $(document).ready(function($) {
 
         //required:
 
-        //name
-        // var name = $("input#name").val();
+        // idstore
         var name = $("input#idstore").val();
         if(name == ""){
-            //$("#error").fadeIn().text("Name required.");
+            //$("#error").fadeIn().text("Id store required.");
             $('#fname').fadeIn('slow');
-            $("input#name").focus();
+            $("input#idstore").focus();
             return false;
         }
 
