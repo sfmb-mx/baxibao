@@ -15,7 +15,8 @@ $(document).ready(function($) {
         //required:
 
         //name
-        var name = $("input#name").val();
+        // var name = $("input#name").val();
+        var name = $("input#idstore").val();
         if(name == ""){
             //$("#error").fadeIn().text("Name required.");
             $('#fname').fadeIn('slow');
