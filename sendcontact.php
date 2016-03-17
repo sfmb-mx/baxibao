@@ -7,8 +7,7 @@ define( "EMAIL_SUBJECT", "Website Visitor Request" ); //UPDATE THIS TO YOUR SUBJ
 
 // Read the form values
 $success = false;
-/* $senderName = isset( $_POST['idstore'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['idstore'] ) : ""; */
-$senderName = isset( $_POST['idstore'] ) ? preg_replace( "/[^\.\-\' 0-9]/", "", $_POST['idstore'] ) : "";
+$senderName = isset( $_POST['idstore'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['idstore'] ) : "";
 $senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
 /* $original_message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : ""; */
 
@@ -36,6 +35,6 @@ if ( $success )
 }
 else
 {
-    echo "<h2>The Id Store field accept numbers only. Please try again.</h2>";
+    echo "<h1>There was a problem sending your message. Please try again.</h1>";
 }
 ?>
