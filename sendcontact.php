@@ -36,6 +36,6 @@ if ( $success )
 }
 else
 {
-    echo "<h2>The Id Store field accept numbers only. Please try again. <a href="http://www.baxibao.cn">Back...</a> </h2>";
+    echo "<h2>The Id Store field accept numbers only. Please try again.</h2>";
 }
 ?>
