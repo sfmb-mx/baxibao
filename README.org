@@ -1,0 +1,24 @@
+* Road map
+
+** DONE Test pages
+CLOSED: [2016-03-17 Thu 18:08]
+
+http://pt.aliexpress.com/store/contactinfo/518212.html
+http://pt.aliexpress.com/store/contactinfo/1968447.html
+
+** DONE Capture store
+CLOSED: [2016-03-17 Thu 18:08]
+
+** TODO Concatenate URL
+
+** TODO GET URL
+
+** TODO Parse DOM
+
+** TODO Insert DOM new info in thanks.html
+
+** DONE Send email
+CLOSED: [2016-03-17 Thu 18:08]
+
+** DONE Display thanks.html
+CLOSED: [2016-03-17 Thu 18:08]
