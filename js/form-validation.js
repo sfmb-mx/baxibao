@@ -58,6 +58,8 @@ $(document).ready(function($) {
             return false;
         }
 
+        console.log(name);
+
     });
 
     // on success...
