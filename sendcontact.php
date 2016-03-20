@@ -11,7 +11,7 @@ $senderName = isset( $_POST['idstore'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/"
 $senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['email'] ) : "";
 /* $original_message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : ""; */
 
-$original_message = echo $_GET['msg'];;
+$original_message = $_GET['msg'];;
 
 $message = 'Name: '.$senderName.'<br/>Email: '.$senderEmail.'<br/>URL: '.$original_message;
 
