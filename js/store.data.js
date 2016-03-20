@@ -31,4 +31,6 @@ function myResults() {
     var storeNumber = sessionStorage.passUrl;
 
     document.getElementById('results').innerHTML = 'Dear supplier, your store: <b>' + storeNumber + '</b> will be processed to submission.<br><br>We will send you an email in 24 hours maximum!<br>Thank you!';
+
+    document.getElementById('xs-results').innerHTML = 'Dear supplier, your store: <b>' + storeNumber + '</b> will be processed to submission.<br><br>We will send you an email in 24 hours maximum!<br>Thank you!';
 }
