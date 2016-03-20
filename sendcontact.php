@@ -12,10 +12,8 @@ $senderEmail = isset( $_POST['email'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/"
 /* $original_message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : ""; */
 
 if(isset($_COOKIE['mymsg'])) {
-    echo "welcome ".$_COOKIE['mymsg'];
+    $original_message = $_COOKIE['mymsg'];
 }
-
-$original_message = $_COOKIE['mymsg'];
 
 $message = 'Name: '.$senderName.'<br/>Email: '.$senderEmail.'<br/>URL: '.$original_message;
 

@@ -18,6 +18,8 @@ function readStoreData(event) {
 
     document.cookie = "mymsg = " + myurl;
 
+    sessionStorage.passUrl = myurl;
+
     console.log('Your variables of interest:');
     console.log(ids);
     console.log(em);
