@@ -7,7 +7,7 @@ function readStoreData(event) {
 
     var ids = document.getElementById('idstore').value,
         em = document.getElementById('email').value,
-        root = "http://pt.aliexpress.com/store/contactinfo/",
+        root = "http://pt.aliexpress.com/store/all-wholesale-products/",
         ext = ".html",
         myurl = root + ids + ext;
 
