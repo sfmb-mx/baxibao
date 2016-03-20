@@ -4,7 +4,22 @@ document.getElementById('contactForm').addEventListener('submit', readStoreData)
 
 function readStoreData(event) {
     // event.preventDefault();
+
+    var ids = document.getElementById('idstore').value,
+        em = document.getElementById('email').value,
+        root = "http://pt.aliexpress.com/store/contactinfo/",
+        ext = ".html",
+        myurl = root + ids + ext;
+
+
+    // $.get(myurl, function(data, status){
+    //     alert("Data: " + data + "\nStatus: " + status);
+    // });
+
+    var msg = "My test string";
+
     console.log('Your variables of interest:');
-    console.log(document.getElementById('idstore').value);
-    console.log(document.getElementById('email').value);
+    console.log(ids);
+    console.log(em);
+    console.log(myurl);
 }

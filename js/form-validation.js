@@ -57,7 +57,6 @@ $(document).ready(function($) {
             $("input#msg").focus();
             return false;
         }
-
         console.log(name);
 
     });
