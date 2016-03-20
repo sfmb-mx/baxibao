@@ -16,10 +16,11 @@ function readStoreData(event) {
     //     alert("Data: " + data + "\nStatus: " + status);
     // });
 
-    var msg = "My test string";
+    document.cookie = "mymsg = " + myurl;
 
     console.log('Your variables of interest:');
     console.log(ids);
     console.log(em);
     console.log(myurl);
+    console.log(document.cookie);
 }
