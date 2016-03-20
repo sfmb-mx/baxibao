@@ -18,11 +18,17 @@ function readStoreData(event) {
 
     document.cookie = "mymsg = " + myurl;
 
-    sessionStorage.passUrl = myurl;
+    sessionStorage.passUrl = ids;
 
     console.log('Your variables of interest:');
     console.log(ids);
     console.log(em);
     console.log(myurl);
     console.log(document.cookie);
+}
+
+function myResults() {
+    var storeNumber = sessionStorage.passUrl;
+
+    document.getElementById('results').innerHTML = 'Dear supplier, your store: ' + storeNumber + ' will be processed to submission,<br>we will send an email in 24 hours maximum!<br>Thank you!';
 }
