@@ -1028,11 +1028,13 @@ Hero
   position: fixed;
   background-color: #f99d1c;
   z-index: 999;
-  width: 100%; }
+  width: 100%; 
+  height: 120px;
+}
 
 header {
   padding: 40px 0;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  border-bottom: solid 0px rgba(255, 255, 255, 0.2) !important;
   position: relative;
   width: 1170px;
   margin: 0 auto;
@@ -1040,7 +1042,7 @@ header {
   header a {
     color: #fff;
     text-transform: uppercase;
-    font-size: 13px; }
+    font-size: 30px; }
     header a.login {
       margin-right: 20px; }
   header .logo {
