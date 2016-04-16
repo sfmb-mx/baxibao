@@ -1704,7 +1704,7 @@ Alert
   padding: 0px;
   min-height: 120px;
   font-family: "Open Sans", sans-serif;
-  background: #f7f7f7;
+  background: #2c589f;
   position: relative;
   margin-top: 65px; }
 
@@ -1718,7 +1718,7 @@ Alert
 
 .alert p {
   font-size: 14px;
-  color: #676767; }
+  color: #ffffff; }
 
 .alert h5 {
   color: #f99d1c;
