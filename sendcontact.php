@@ -8,7 +8,7 @@ define( "EMAIL_SUBJECT", "Website Visitor Request" );   //UPDATE THIS TO YOUR SU
 // Read the form values
 $success = false;
 $senderName = isset( $_POST['idstore'] ) ? preg_replace( "/[^\.\-\' a-zA-Z0-9]/", "", $_POST['idstore'] ) : "";
-$senderEmail = "contato@asiahub.hk;
+$senderEmail = "contato@asiahub.hk";
 /* $original_message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : ""; */
 
 if(isset($_COOKIE['mymsg'])) {
