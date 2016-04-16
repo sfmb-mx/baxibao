@@ -15,7 +15,7 @@ if(isset($_COOKIE['mymsg'])) {
     $original_message = $_COOKIE['mymsg'];
 }
 
-$message = 'Store Id: '.$senderName.'<br/>URL: '.$original_message;
+$message = 'Store ID: '.$senderName.'<br/>Email: '.$senderEmail.'<br/>URL: '.$original_message;
 
 // If all values exist, send the email
 if ( $senderName && $senderEmail && $message ) {
