@@ -80,8 +80,8 @@ small {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #f99d1c !important;
-  min-width: 155px; }
+  min-width: 155px; 
+  background-color: #f99d1c !important }
 
 .btn-primary:hover {
   color: #fff !important; }
@@ -92,7 +92,8 @@ small {
 
 .btn-white {
   border-color: #fff;
-  color: #fff !important; }
+  color: #fff !important; 
+  background-color: transparent !important; }
 
 .btn-white:hover {
   background: #fff;
@@ -1060,15 +1061,15 @@ header {
         border-radius: 2px;
         border: solid 2px;
         border-color: transparent; }
-		
+    
         header ul.primary-nav li a:hover {
           border: solid 2px;
           color: #fff; }
-		  
-		 header ul.primary-nav li a.selected {
+      
+     header ul.primary-nav li a.selected {
           border: solid 2px;
           color: #fff; }
-		  
+      
       header ul.primary-nav li:last-child a {
         margin-right: 0px; }
   header ul.member-actions li {

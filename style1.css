@@ -622,3 +622,11 @@ h3#comments {
     background-color:none !important;
     outline: 0;
 }
+
+.hero{
+	background-image: url(http://static-cbt.mercadolibre.com/images/meli-cbt/rio-sidewalk.jpg);
+}
+
+.testimonial-slider{
+    background-image: url(http://marketplace.br.cnova.com/wp/wp-content/uploads/2016/10/hero-background-01.jpg)
+}
