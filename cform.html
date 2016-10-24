@@ -1,238 +1,227 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ASIAHUB SOURCING - One-click Sourcing</title>
-        <meta name="description" content="AsiaHub source, customer centricity" />
-        <meta name="keywords" content="customer centricity, AsiaHub, Global Trade Management" />
-        <meta name="author" content="Peter Finlan, Taty Grassini Codrops and Bizland.biz team" />
-
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-        <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
-        <link rel="icon" type="image/png" href="img/favicon/android-chrome-192x192.png" sizes="192x192">
-        <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
-        <link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16">
-        <link rel="manifest" href="img/favicon/manifest.json">
-        <link rel="shortcut icon" href="img/favicon/favicon.ico">
-        <meta name="msapplication-TileColor" content="#663fb5">
-        <meta name="msapplication-TileImage" content="img/favicon/mstile-144x144.png">
-        <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
-        <meta name="theme-color" content="#663fb5">
-
-        <link rel="stylesheet" href="css/landio.css">
-        <link rel="stylesheet" href="css/custom.css">
-    </head>
-
-    <body onload="URLParser()">
-
-        <!-- Navigation
-             ================================================== -->
-
-        <nav class="navbar navbar-dark bg-inverse bg-inverse-custom navbar-fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <span class="$icon-logo"></span>
-                    <span class="sr-only">AsiaHub.hk</span>
-                </a>
-                <a class="navbar-toggler hidden-md-up pull-xs-right" data-toggle="collapse" href="#collapsingNavbar" aria-expanded="false" aria-controls="collapsingNavbar">
-                    &#9776;
-                </a>
-                <a class="navbar-toggler navbar-toggler-custom hidden-md-up pull-xs-right" data-toggle="collapse" href="#collapsingMobileUser" aria-expanded="false" aria-controls="collapsingMobileUser">
-                    <span class="icon-user"></span>
-                </a>
-                <div id="collapsingNavbar" class="collapse navbar-toggleable-custom" role="tabpanel" aria-labelledby="collapsingNavbar">
-                    <ul class="nav navbar-nav pull-xs-right">
-                        <li class="nav-item nav-item-toggable">
-                            <a class="nav-link" href="#"><small>NEW</small> English<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item nav-item-toggable">
-                            <a class="nav-link" href="#">Quem Somos?</a>
-                        </li>
-                        <li class="nav-item nav-item-toggable">
-                            <a class="nav-link" href="#">Suporte Online</a>
-                        </li>
-                        <li class="nav-item nav-item-toggable hidden-md-up">
-                            <form class="navbar-form">
-                                <input class="form-control navbar-search-input" type="text" placeholder="Type your search &amp; hit Enter&hellip;">
-                            </form>
-                        </li>
-                        <li class="navbar-divider hidden-sm-down"></li>
-                        <li class="nav-item dropdown nav-dropdown-search hidden-sm-down">
-                            <a class="nav-link dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="icon-search"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-search" aria-labelledby="dropdownMenu1">
-                                <form class="navbar-form">
-                                    <input class="form-control navbar-search-input" type="text" placeholder="Type your search &amp; hit Enter&hellip;">
-                                </form>
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown hidden-sm-down textselect-off">
-                            <a class="nav-link dropdown-toggle nav-dropdown-user" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="img/face5.jpg" height="40" width="40" alt="Avatar" class="img-circle"> <span class="icon-caret-down"></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-user dropdown-menu-animated" aria-labelledby="dropdownMenu2">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src="img/face5.jpg" height="60" width="60" alt="Avatar" class="img-circle">
-                                    </div>
-                                    <div class="media-body media-middle">
-                                        <h5 class="media-heading">User ID</h5>
-                                        <h6>hey@joelfisher.com</h6>
-                                    </div>
-                                </div>
-                                <a href="#" class="dropdown-item text-uppercase">View posts</a>
-                                <a href="#" class="dropdown-item text-uppercase">Manage groups</a>
-                                <a href="#" class="dropdown-item text-uppercase">Subscription &amp; billing</a>
-                                <a href="#" class="dropdown-item text-uppercase text-muted">Log out</a>
-                                <a href="#" class="btn-circle has-gradient pull-xs-right">
-                                    <span class="sr-only">Edit</span>
-                                    <span class="icon-edit"></span>
-                                </a>
-                            </div>
-                        </li>
+<html class="gr__sandbox-cbt_mercadolibre_com"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Asiahub, expand your business to Latin America.</title>
+<link rel="shortcut icon" href="//static-cbt.mercadolibre.com/images/favicon-meli.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://static-cbt.mercadolibre.com/styles/cbt.min.css">
+<link rel="stylesheet" href="css/cbt_merchant.css">
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20161018160839/recaptcha__en.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20161018160839/recaptcha__en.js"></script><script type="text/javascript">
+var secureURI = 'https://sandbox-cbt.mercadolibre.com';
+var currentPage = 'cbt';
+</script>
+<style type="text/css">
+</style>
+</head>
+<body data-gr-c-s-loaded="true">
+    <div class="wrap">
+    <div class="ml-header">
+        <div class="ml-header-inner">
+            <h1><a href="index.html"><img height="35" src="img/logo_transparent.png"></h1></a>
+                            <div class="cbt-header-links">
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="http://208.113.130.107:8069/web">Login</a></li>
+                        <li><a href="cform.html">Register</a></li>
                     </ul>
                 </div>
-                <div id="collapsingMobileUser" class="collapse navbar-toggleable-custom dropdown-menu-custom p-x-1 hidden-md-up" role="tabpanel" aria-labelledby="collapsingMobileUser">
-                    <div class="media m-t-1">
-                        <div class="media-left">
-                            <img src="img/face5.jpg" height="60" width="60" alt="Avatar" class="img-circle">
-                        </div>
-                        <div class="media-body media-middle">
-                            <h5 class="media-heading">Joel Fisher</h5>
-                            <h6>hey@joelfisher.com</h6>
-                        </div>
                     </div>
-                    <a href="#" class="dropdown-item text-uppercase">View posts</a>
-                    <a href="#" class="dropdown-item text-uppercase">Manage groups</a>
-                    <a href="#" class="dropdown-item text-uppercase">Subscription &amp; billing</a>
-                    <a href="#" class="dropdown-item text-uppercase text-muted">Log out</a>
-                    <a href="#" class="btn-circle has-gradient pull-xs-right m-b-1">
-                        <span class="sr-only">Edit</span>
-                        <span class="icon-edit"></span>
-                    </a>
+        
+        
+    </div>
+    <div id="loginModal" class="cbt-hide modalWindow rel">
+        <h2 class="f18">Login to your Account</h2>
+        <form id="loginppForm" method="post" class="cbt-form" novalidate="novalidate" action="https://sandbox-cbt.mercadolibre.com/secure/login/merchant" onsubmit="popupLogin(event, 'https://sandbox-cbt.mercadolibre.com/secure/login/merchant')">
+            <input type="hidden" name="popup-login" value="1">
+            <input type="hidden" name="action" value="cbtlogin">
+            <div class="cbt-form-row cbt-form-required">
+                <label for="user_email" class="label">Email:</label>
+                <input type="text" class="inputField brd-rad" id="user_email" required="required" name="lemail" value="">
+            </div>
+            <div class="cbt-form-row cbt-form-required">
+                <label for="user_password" class="label">Password:</label>
+                <input type="password" class="inputField brd-rad" id="user_password" name="lpass" required="required">
+                <div class="clear">&nbsp;</div>
+            </div>
+            <div class="cbt-form-row">
+                <div class="login-btn">
+                    <div class="fl"><input type="submit" value="Login" id="signInButton" tabindex="4" class="cbt-btn" name="confirm"></div>
+                    <div class="fl"><span class="cbt-loading cbt-hide"></span></div>
+                    <div class="clear">&nbsp;</div>
                 </div>
             </div>
-        </nav>
+        </form>
+    </div>
+    <div class="mask">&nbsp;</div>
+<script type="text/javascript">
+    var currentPage = 'merchantCreate';
+    var siteCurrencyMap = {"US":["USD"],"CN":["USD"],"GB":["GBP"],"DE":["EUR"],"HK":["USD"],"AR":["USD"],"CL":["USD"],"CO":["USD"],"AU":["USD"],"UY":["USD"],"PT":["EUR"]};
+    var defaultCurrency = 'USD';
+    var restrictedNameWords = [".",",","@","(dot)","(.)",".com","dotcom",".net","dotnet",".cn","dotcn",".hk","dothk",".tw","dottw",".tv","dottv","mercado","meli","dabee",".uk","dotuk",".gb","dotgb",".co.uk","dotcodotuk","'","\"","\/"];
+</script>
+<style type="text/css">
+.loginFrmSection{
+    margin-top:40px;
+}
+</style>
+<div id="wrapper">
+    <div class="frm loginFrmSection brd-rad">
+        <div>
+            <h1 class="noMargin">START YOUR STORE</h1>
+            <span class="cbt-form-hint">* Mandatory fields</span>
+                    </div>
+        <div class="frmArea">
+            <input type="hidden" value="" id="email_error" name="email_error">
+            <input type="hidden" value="" id="name_error" name="name_error">
+            <form id="merchantCreateForm" method="" class="cbt-form myForm" novalidate="novalidate" name="merchantCreateForm">
+                <input type="hidden" value="en" id="lang_code" name="lang_code">
+                <input type="hidden" value="en_US" id="locale" name="locale">
+                <input type="hidden" value="1" id="active" name="active">
+                <input type="hidden" value="" id="location" name="location">
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_name" class="label">Merchant Name:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField small brdrRad" id="merchant_name" required="required" name="merchant_name" maxlength="100">
+                </div>
 
-        <!-- Hero Section
-             ================================================== -->
-
-        <header class="jumbotron-2 bg-inverse text-xs-center center-vertically" role="banner">
-            <div class="#">
-                <h1 class="display-3">One-click<br>Sourcing</h1>
-                <h2 class="m-b-3">Um clique para a fonte de qualquer<br>produto na web!</h2>
-
-                <a class="btn btn-secondary-outline m-b-1" data-redirect="false" data-type="track" data-name="Internal Link" data-properties="{&quot;destination&quot;: &quot;Drag to Bookmark Bar&quot;}" href="javascript:void(function(d,sc,e){var%20r='http://www.asiahub.hk/cform.html?cur='+e(d.location.href);setTimeout(function(){if(!window.open(r,'_blank'))location.href=r;},0);})(document,screen,encodeURIComponent);" role="button"><span class="icon-sketch"></span>ASIAHUB SOURCING</a>
-
-            </div>
-            <div class="container">
-                <div class="row col-md-12">
-                    <div id="contact-form-wrap" class="container contact-form-wrap">
-                        <div class="row">
-                            <section class="col-md-10 text-center">
-                                <div class="contact-item pad-common">
-                                    <div class="alert alert-error error" id="fname">
-                                        <p>Enter your name please</p>
-                                    </div>
-                                    <div class="alert alert-error  error" id="fmail">
-                                        <p>Please provide a valid email</p>
-                                    </div>
-                                    <div class="alert alert-error  error" id="fmsg">
-                                        <p>URL and comment fields should not be empty</p>
-                                    </div>
-                                    <form name="myform" id="contactForm" action="sendcontact.php" enctype="multipart/form-data" method="post">
-                                        <section  class="form-group">
-                                            <input readonly type="hidden" placeholder="Filled using the bookmarklet" id="name" name="name" class="form-control">
-                                        </section>
-
-                                        <section  class="form-group">
-                                            <input type="text" placeholder="Email" name="email" id="email" class="form-control">
-                                        </section>
-
-                                        <section  class="form-group">
-                                            <textarea readonly placeholder="http://" name="message" rows="3" id="msg" class="form-control"></textarea>
-                                        </section>
-
-                                        <section  class="form-group">
-                                            <textarea placeholder="Comentários... (Ex. Cor, Tamanho, Quantidade, Destino, etc...)" name="message2" rows="3" id="msg2" class="form-control"></textarea>
-                                        </section>
-
-                                        <label class="c-input c-checkbox">
-                                        <input type="checkbox" unchecked>
-                                        <span class="c-indicator"></span>Ativar <a>Price-drop Alerts</a>.
-                                        </label>
-                                        <br>
-
-                                        <section class="btn-wrap text-center">
-                                            <button class="btn btn-secondary-outline m-b-1" id="submit" name="submit" type="submit">Enviar</button>
-                                        </section>
-                                    </form>
-                                </div>
-                            </section>
-                        </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_email" class="label">Email:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField brdrRad" id="merchant_email" required="required" name="email" onblur="merchantEmailAvailabilityCheck()" maxlength="100">
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_password" class="label">Password:<em>&nbsp;*</em></label>
+                    <input type="password" class="inputField small brdrRad" id="merchant_password" name="password" autocomplete="off">
+                    <span class="cbt-form-hint">Choose a password between 6 and 20 characters.</span>
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_confirm_password" class="label">Confirm Password:<em>&nbsp;*</em></label>
+                    <input type="password" class="inputField small brdrRad" id="merchant_confirm_password" name="confirm_password">
+                    <span class="cbt-form-hint pass">Passwords should match.</span>
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    &nbsp;
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_display_name" class="label">Display Name:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField brdrRad" id="merchant_display_name" required="required" name="merchant_display_name" onblur="merchantNameAvailabilityCheck()" maxlength="100">
+                    <span id="dispname-help" class="cbt-icon-help-sign cbt-shownby-pointerenter" aria-owns="cbt-layer-28" aria-haspopup="true"></span>
+                    <div class="cbt-box-error dispname-error">
+                          <p></p>
                     </div>
                 </div>
-            </div>
-        </header>
-
-        <!-- Intro
-             ================================================== -->
-
-        <section class="section-intro bg-faded text-xs-center">
-            <div class="container">
-                <h3 class="wp wp-1">Nossos Clientes</h3>
-                <p class="lead wp wp-2">A tecnologia ASIAHUB SOURCING é utilizada por alguns dos maiores e-commerce do Brasil!</p>
-                <img src="img/logos_clients.png" alt="iPad mock" class="img-fluid wp wp-3">
-            </div>
-        </section>
-
-        <!-- Footer
-             ================================================== -->
-
-        <footer class="section-footer bg-inverse" role="contentinfo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-5">
-                        <div class="media">
-                            <div class="media-left">
-                                <span class="#"></span>
-                            </div>
-                            <small class="media-body media-bottom">
-                                &copy;2016 Caring Trading and Logistics Limited. <br>
-                                "Duplication is prohibited by law and prevented by your integrity."
-                                <br>Zig Ziglar
-                            </small>
-                        </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_addr1" class="label">Address:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField brdrRad" id="merchant_addr1" required="required" name="address1" maxlength="250">
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_country" class="label">Country:<em>&nbsp;*</em></label>
+                    <select class="inputField brdrRad" id="merchant_country" required="required" name="country" onchange="prePopulateCurrency(siteCurrencyMap, defaultCurrency);">
+                        <option value="">Select Country</option>
+                                                <option value="US">USA</option>
+                                                <option value="HK">Hong Kong</option>
+                                                <option value="SG">Singapore</option>
+                                                <option value="GB">United Kingdom</option>
+                                                <option value="DE">Germany</option>
+                                                <option value="CN">China</option>
+                                                <option value="BR">Brazil</option>
+                                                <option value="MX">Mexico</option>
+                                                <option value="ES">Spain</option>
+                                                <option value="AR">Argentina</option>
+                                                <option value="CL">Chile</option>
+                                                <option value="CO">Colombia</option>
+                                                <option value="AU">Australia</option>
+                                            </select>
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_country" class="label">Currency:<em>&nbsp;*</em></label>
+                    <select class="inputField brdrRad" id="merchant_currency" required="required" name="currency">
+                        <option value="">Select Currency</option>
+                    </select>
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_state" class="label">State:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField brdrRad" id="merchant_state" required="required" name="state" maxlength="50">
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_city" class="label">City:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField brdrRad" id="merchant_city" required="required" name="city" maxlength="100">
+                </div>
+                <div class="cbt-form-row cbt-form-required rel">
+                    <label for="merchant_zip" class="label">Zip:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField small brdrRad" id="merchant_zip" required="required" name="zip" maxlength="20">
+                    <i id="phoneHelpIcon" class="ch-icon-private-sign ch-shownby-pointerenter" aria-owns="ch-layer-1" aria-haspopup="true" data-side="right" data-align="center"></i>
+                    <div class="ch-popover ch-layer ch-box-lite ch-cone phonetip" data-side="right" data-align="center"><div class="ch-popover-content"><span class="ch-form-hint" style="margin-left:0px;">Only visible by its counterparty when buying or selling.</span></div></div>
+                </div>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_phone" class="label">Phone:<em>&nbsp;*</em></label>
+                    <input type="text" class="inputField small brdrRad" id="merchant_phone" required="required" name="phone" maxlength="14">
+                    <span class="cbt-popover cbt-bubble cbt-box-icon cbt-box-error cbt-cone valid-phone">
+                        <i class="cbt-icon-remove-sign"></i>
+                        <span class="cbt-popover-content">Provide Valid Phone number.</span>
+                    </span>
+                </div>
+                <div id="recaptcha">
+                    <div class="captcha-error">
+                        <div class="cbt-box-error"><i class="cbt-icon-remove-sign"></i>Please verify you are human.</div>
                     </div>
-                    <div class="col-md-6 col-lg-7">
-                        <ul class="nav nav-inline">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><small>NEW</small> Histórico<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item"><a class="nav-link" href="#">Quem Somos?</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Suporte Online</a></li>
-                             <li class="nav-item"><a class="nav-link scroll-top" href="#totop">Voltar ao topo <span class="icon-caret-up"></span></a></li>
-                        </ul>
+                    <div class="cbt-form-row cbt-form-required">
+                        <label for="merchant_phone" class="label">&nbsp;</label>
+                         <div class="g-recaptcha" data-sitekey="6LfQvxATAAAAAA7fQkjoZJ1nSUMB-6aq7R16bl_r" data-type="text"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LfQvxATAAAAAA7fQkjoZJ1nSUMB-6aq7R16bl_r&amp;co=aHR0cHM6Ly9zYW5kYm94LWNidC5tZXJjYWRvbGlicmUuY29tOjQ0Mw..&amp;hl=en&amp;type=text&amp;v=r20161018160839&amp;size=normal&amp;cb=oss3j24pia0i" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no" name="undefined"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
                     </div>
                 </div>
-            </div>
-        </footer>
+                <div class="cbt-form-row cbt-form-required">
+                    <label for="merchant_phone" class="label"></label>
+                    <input type="checkbox" id="merchant_terms" required="required" name="terms_conditions">
+                    <span id="terms-conditions">I read and agree with  <a href="/us/merchant/cbt-merchant-agreement/" class="anchor" target="_blank">Terms and Conditions</a> for using Asiahub CBT - Asiahub's Cross-Border Trade Platform.</span>
+                    <span class="cbt-popover cbt-bubble cbt-box-icon cbt-box-error cbt-cone valid-terms">
+                        <i class="cbt-icon-remove-sign"></i>
+                        <span class="cbt-popover-content">Please accept the Terms &amp; Conditions.</span>
+                    </span>
+                </div>
+                
+                <div class="cbt-form-row cbt-form-required" id="create-submit">
+                    <div class="login-btn fl"><input type="submit" class="cbt-btn" value="Register" id="createButton"></div>
+                    <div class="fl"><span class="cbt-loading cbt-hide"></span></div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <div class="cbt-form-row">
+                    
+                </div>
+            </form>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="js/landio.min.js"></script>
+        </div>
+    </div>
+    <div class="cbt-popover cbt-bubble cbt-box-icon cbt-box-error cbt-cone" role="alert" id="cbt-merchant-email-exists" aria-hidden="false" data-side="right" data-align="top"><i class="cbt-icon-remove-sign"></i><div class="cbt-popover-content">Email already exists.</div></div>
+    <div class="cbt-popover cbt-bubble cbt-box-icon cbt-box-error cbt-cone" role="alert" id="cbt-merchant-name-exists" aria-hidden="false" data-side="right" data-align="top"><i class="cbt-icon-remove-sign"></i><div class="cbt-popover-content">display name already exists.</div></div>
+</div>
+</div>
+<footer class="content-footer">
+    <div class="content">
 
-        <script src="js/form-validation.js" ></script>
-        <script src="js/custom.js"></script>
-    </body>
-</html>
+        <ul class="each-footer-links">
+            <li><a href="http://investor.mercadolibre.com/">Investor Relations</a></li>
+            <li class="last-footer"><a href="/us/merchant/cbt-merchant-agreement/">Terms and Conditions</a></li>
+            <li class="last-footer"><a href="/us/merchant/faqs/">FAQs</a></li>
+        </ul>
+            
+        <div class="copyright">
+            <p>Copyright © 2016 Caring Trading and Logistics Limited
+            </p>
+        </div>
+
+    </div>
+</footer>
+<script type="text/javascript" src="//static-cbt.mercadolibre.com/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="//static-cbt.mercadolibre.com/js/cbt.min.js"></script>
+<script src="//static-cbt.mercadolibre.com/js/oauth.js?v=10316" type="text/javascript"></script><script src="//static-cbt.mercadolibre.com/js/oauth_components_init.js?v=10316" type="text/javascript"></script><script src="//static-cbt.mercadolibre.com/js/cbt_validations.js?v=10316" type="text/javascript"></script><script type="text/javascript">
+$(document).ready(function(){
+//  var cbtLoginModal = $('.login').modal($('#loginModal'));
+});
+</script>
+    
+<script type="text/javascript">
+$(function(){
+    addScript("https://www.google.com/recaptcha/api.js?hl=en", loadPlugin(true));
+})
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script></body></html>
