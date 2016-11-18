@@ -6,14 +6,15 @@
 <link rel="stylesheet" href="http://static-cbt.mercadolibre.com/styles/cbt.min.css">
 <link rel="stylesheet" href="css/cbt_merchant.css">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20161018160839/recaptcha__en.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20161018160839/recaptcha__en.js"></script><script type="text/javascript">
+<!-- <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/r20161018160839/recaptcha__en.js"></script>
+	<script type="text/javascript">
 var secureURI = 'https://sandbox-cbt.mercadolibre.com';
 var currentPage = 'cbt';
-</script>
+</script> -->
 <style type="text/css">
 </style>
 </head>
-<body data-gr-c-s-loaded="true">
+<body>
     <div class="wrap">
     <div class="ml-header">
         <div class="ml-header-inner">
@@ -31,26 +32,7 @@ var currentPage = 'cbt';
     </div>
     <div id="loginModal" class="cbt-hide modalWindow rel">
         <h2 class="f18">Login to your Account</h2>
-        <form id="loginppForm" method="post" class="cbt-form" novalidate="novalidate" action="https://sandbox-cbt.mercadolibre.com/secure/login/merchant" onsubmit="popupLogin(event, 'https://sandbox-cbt.mercadolibre.com/secure/login/merchant')">
-            <input type="hidden" name="popup-login" value="1">
-            <input type="hidden" name="action" value="cbtlogin">
-            <div class="cbt-form-row cbt-form-required">
-                <label for="user_email" class="label">Email:</label>
-                <input type="text" class="inputField brd-rad" id="user_email" required="required" name="lemail" value="">
-            </div>
-            <div class="cbt-form-row cbt-form-required">
-                <label for="user_password" class="label">Password:</label>
-                <input type="password" class="inputField brd-rad" id="user_password" name="lpass" required="required">
-                <div class="clear">&nbsp;</div>
-            </div>
-            <div class="cbt-form-row">
-                <div class="login-btn">
-                    <div class="fl"><input type="submit" value="Login" id="signInButton" tabindex="4" class="cbt-btn" name="confirm"></div>
-                    <div class="fl"><span class="cbt-loading cbt-hide"></span></div>
-                    <div class="clear">&nbsp;</div>
-                </div>
-            </div>
-        </form>
+        
     </div>
     <div class="mask">&nbsp;</div>
 <script type="text/javascript">
@@ -73,11 +55,7 @@ var currentPage = 'cbt';
         <div class="frmArea">
             <input type="hidden" value="" id="email_error" name="email_error">
             <input type="hidden" value="" id="name_error" name="name_error">
-            <form id="merchantCreateForm" method="" class="cbt-form myForm" novalidate="novalidate" name="merchantCreateForm">
-                <input type="hidden" value="en" id="lang_code" name="lang_code">
-                <input type="hidden" value="en_US" id="locale" name="locale">
-                <input type="hidden" value="1" id="active" name="active">
-                <input type="hidden" value="" id="location" name="location">
+            <form id="merchantCreateForm" method="POST" class="cbt-form myForm" name="create" action="upload.php">
                 <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_name" class="label">Merchant Name:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField small brdrRad" id="merchant_name" required="required" name="merchant_name" maxlength="100">
@@ -100,19 +78,19 @@ var currentPage = 'cbt';
                 <div class="cbt-form-row cbt-form-required">
                     &nbsp;
                 </div>
-                <div class="cbt-form-row cbt-form-required">
+                <!-- <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_display_name" class="label">Display Name:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField brdrRad" id="merchant_display_name" required="required" name="merchant_display_name" onblur="merchantNameAvailabilityCheck()" maxlength="100">
                     <span id="dispname-help" class="cbt-icon-help-sign cbt-shownby-pointerenter" aria-owns="cbt-layer-28" aria-haspopup="true"></span>
                     <div class="cbt-box-error dispname-error">
                           <p></p>
                     </div>
-                </div>
+                </div> -->
                 <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_addr1" class="label">Address:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField brdrRad" id="merchant_addr1" required="required" name="address1" maxlength="250">
                 </div>
-                <div class="cbt-form-row cbt-form-required">
+                <!-- <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_country" class="label">Country:<em>&nbsp;*</em></label>
                     <select class="inputField brdrRad" id="merchant_country" required="required" name="country" onchange="prePopulateCurrency(siteCurrencyMap, defaultCurrency);">
                         <option value="">Select Country</option>
@@ -136,7 +114,7 @@ var currentPage = 'cbt';
                     <select class="inputField brdrRad" id="merchant_currency" required="required" name="currency">
                         <option value="">Select Currency</option>
                     </select>
-                </div>
+                </div> 
                 <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_state" class="label">State:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField brdrRad" id="merchant_state" required="required" name="state" maxlength="50">
@@ -144,13 +122,13 @@ var currentPage = 'cbt';
                 <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_city" class="label">City:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField brdrRad" id="merchant_city" required="required" name="city" maxlength="100">
-                </div>
+                </div> 
                 <div class="cbt-form-row cbt-form-required rel">
                     <label for="merchant_zip" class="label">Zip:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField small brdrRad" id="merchant_zip" required="required" name="zip" maxlength="20">
                     <i id="phoneHelpIcon" class="ch-icon-private-sign ch-shownby-pointerenter" aria-owns="ch-layer-1" aria-haspopup="true" data-side="right" data-align="center"></i>
                     <div class="ch-popover ch-layer ch-box-lite ch-cone phonetip" data-side="right" data-align="center"><div class="ch-popover-content"><span class="ch-form-hint" style="margin-left:0px;">Only visible by its counterparty when buying or selling.</span></div></div>
-                </div>
+                </div> -->
                 <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_phone" class="label">Phone:<em>&nbsp;*</em></label>
                     <input type="text" class="inputField small brdrRad" id="merchant_phone" required="required" name="phone" maxlength="14">
@@ -159,7 +137,7 @@ var currentPage = 'cbt';
                         <span class="cbt-popover-content">Provide Valid Phone number.</span>
                     </span>
                 </div>
-                <div id="recaptcha">
+                <!-- <div id="recaptcha">
                     <div class="captcha-error">
                         <div class="cbt-box-error"><i class="cbt-icon-remove-sign"></i>Please verify you are human.</div>
                     </div>
@@ -167,7 +145,7 @@ var currentPage = 'cbt';
                         <label for="merchant_phone" class="label">&nbsp;</label>
                          <div class="g-recaptcha" data-sitekey="6LfQvxATAAAAAA7fQkjoZJ1nSUMB-6aq7R16bl_r" data-type="text"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LfQvxATAAAAAA7fQkjoZJ1nSUMB-6aq7R16bl_r&amp;co=aHR0cHM6Ly9zYW5kYm94LWNidC5tZXJjYWRvbGlicmUuY29tOjQ0Mw..&amp;hl=en&amp;type=text&amp;v=r20161018160839&amp;size=normal&amp;cb=oss3j24pia0i" title="recaptcha widget" width="304" height="78" role="presentation" frameborder="0" scrolling="no" name="undefined"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
                     </div>
-                </div>
+                </div> -->
                 <div class="cbt-form-row cbt-form-required">
                     <label for="merchant_phone" class="label"></label>
                     <input type="checkbox" id="merchant_terms" required="required" name="terms_conditions">
@@ -184,7 +162,6 @@ var currentPage = 'cbt';
                     <div class="clear">&nbsp;</div>
                 </div>
                 <div class="cbt-form-row">
-                    
                 </div>
             </form>
 
@@ -211,7 +188,7 @@ var currentPage = 'cbt';
     </div>
 </footer>
 <script type="text/javascript" src="//static-cbt.mercadolibre.com/js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="//static-cbt.mercadolibre.com/js/cbt.min.js"></script>
+<!-- <script type="text/javascript" src="//static-cbt.mercadolibre.com/js/cbt.min.js"></script>
 <script src="//static-cbt.mercadolibre.com/js/oauth.js?v=10316" type="text/javascript"></script><script src="//static-cbt.mercadolibre.com/js/oauth_components_init.js?v=10316" type="text/javascript"></script><script src="//static-cbt.mercadolibre.com/js/cbt_validations.js?v=10316" type="text/javascript"></script><script type="text/javascript">
 $(document).ready(function(){
 //  var cbtLoginModal = $('.login').modal($('#loginModal'));
@@ -224,4 +201,4 @@ $(function(){
 })
 </script>
 
-<script src="https://www.google.com/recaptcha/api.js?hl=en"></script></body></html>
+<script src="https://www.google.com/recaptcha/api.js?hl=en"></script> --></body></html>
