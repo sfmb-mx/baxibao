@@ -69,7 +69,7 @@ class OpenERP {
 
         foreach($values as $x){
             if(!empty($x)){
-                    array_push( $domains,  new xmlrpcval( 
+                    array_push( $domains,  new xmlrpcval(
                                                         array(  new xmlrpcval($x[0], "string" ),
                                                                  new xmlrpcval( $x[1],"string" ),
                                                                  new xmlrpcval( $x[2], xmlrpc_get_type($x[2]) )
@@ -84,9 +84,9 @@ class OpenERP {
         $msg->addParam(new xmlrpcval($offset, "int")); /* OFFSET, START FROM */
         $msg->addParam(new xmlrpcval($max, "int")); /* MAX RECORD LIMITS */
         $msg->addParam(new xmlrpcval($order, "string"));
-        
+
         $resp = $client->send($msg);
-        
+
         if ($resp->faultCode())
             return -1; /* if the record is not created  */
         else
@@ -105,7 +105,7 @@ class OpenERP {
         $msg->addParam(new xmlrpcval("search", "string"));/** method which u like to execute */
         foreach($values as $x){
             if(!empty($x)){
-                    array_push( $domains,  new xmlrpcval( 
+                    array_push( $domains,  new xmlrpcval(
                                                         array(  new xmlrpcval($x[0], "string" ),
                                                                  new xmlrpcval( $x[1],"string" ),
                                                                  new xmlrpcval( $x[2], "string" )
@@ -119,7 +119,7 @@ class OpenERP {
         $msg->addParam(new xmlrpcval($offset, "int")); /* OFFSET, START FROM */
         $msg->addParam(new xmlrpcval($max, "int")); /* MAX RECORD LIMITS */
         $msg->addParam(new xmlrpcval($order, "string"));
-        
+
         $resp = $client->send($msg);
 
         if ($resp->faultCode())
@@ -138,7 +138,7 @@ class OpenERP {
         foreach($values as $k=>$v){
             $nval[$k] = new xmlrpcval( $v, xmlrpc_get_type($v) );
         }
-         
+
         $msg = new xmlrpcmsg('execute');
         $msg->addParam(new xmlrpcval($this->database, "string"));  //* database name */
         $msg->addParam(new xmlrpcval($this->uid, "int")); /* useid */
@@ -146,9 +146,9 @@ class OpenERP {
         $msg->addParam(new xmlrpcval($model_name, "string"));/** model name where operation will held * */
         $msg->addParam(new xmlrpcval("create", "string"));/** method which u like to execute */
         $msg->addParam(new xmlrpcval($nval, "struct"));/** parameters of the methods with values....  */
-        
+
         $resp = $client->send($msg);
-        
+
         if ($resp->faultCode())
             return -1; /* if the record is not created  */
         else
@@ -222,9 +222,9 @@ class OpenERP {
     }
 
     public function unlink($ids , $model_name) {
-        
+
         $client = new xmlrpc_client($this->server."object");
-      
+
         $client->return_type = 'phpvals';
 
         $id_val = array();
@@ -301,7 +301,7 @@ class OpenERP {
         foreach($columns as $column){
             array_push($array_temp, new xmlrpcval($column,"string"));
         }
-         
+
         $msg = new xmlrpcmsg('execute');
         $msg->addParam(new xmlrpcval($this->database, "string"));  //* database name */
         $msg->addParam(new xmlrpcval($this->uid, "int")); /* useid */
@@ -309,7 +309,7 @@ class OpenERP {
         $msg->addParam(new xmlrpcval($model, "string"));/** model name where operation will held * */
         $msg->addParam(new xmlrpcval("default_get", "string"));/** method which u like to execute */
         $msg->addParam(new xmlrpcval($array_temp, "array"));
-        
+
         $resp = $client->send($msg);
         print_r($resp);
         if ($resp->faultCode())
@@ -317,14 +317,14 @@ class OpenERP {
         else
             return $resp->value();
     }
-    
+
     public function button_click($model, $method, $record_ids){
         $client = new xmlrpc_client($this->server."object");
         $client->setSSLVerifyPeer(0);
         $client->return_type = 'phpvals';
         //   ['execute','userid','password','module.name',{values....}]
         $nval = array();
-        
+
         $msg = new xmlrpcmsg('execute');
         $msg->addParam(new xmlrpcval($this->database, "string"));  //* database name */
         $msg->addParam(new xmlrpcval($this->uid, "int")); /* useid */
@@ -332,20 +332,20 @@ class OpenERP {
         $msg->addParam(new xmlrpcval($model, "string"));/** model name where operation will held * */
         $msg->addParam(new xmlrpcval($method, "string"));/** method which u like to execute */
         $msg->addParam(new xmlrpcval($record_id, "int"));/** parameters of the methods with values....  */
-        
+
         $resp = $client->send($msg);
-        
+
         if ($resp->faultCode())
             return -1; /* if the record is not created  */
         else
             return $resp->value();  /* return new generated id of record */
     }
-    
+
     public function workflow($model, $method, $record_id) {
         $client = new xmlrpc_client($this->server."object");
         $client->setSSLVerifyPeer(0);
         $client->return_type = 'phpvals';
-        
+
         $msg = new xmlrpcmsg('exec_workflow');
         $msg->addParam(new xmlrpcval($this->database, "string"));  //* database name */
         $msg->addParam(new xmlrpcval($this->uid, "int")); /* useid */
@@ -353,7 +353,7 @@ class OpenERP {
         $msg->addParam(new xmlrpcval($model, "string"));/** model name where operation will held * */
         $msg->addParam(new xmlrpcval($method, "string"));/** method which u like to execute */
         $msg->addParam(new xmlrpcval($record_id, "int"));/** parameters of the methods with values....  */
-        
+
         $resp = $client->send($msg);
         if ($resp->faultCode())
             return -1; /* if the record is not created  */
